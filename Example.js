@@ -1,16 +1,9 @@
-import React, {
-  Component,
-} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
   View,
 } from 'react-native';
-import Launch from './components/Launch';
-import Register from './components/Register';
-import Login from './components/Login';
-import Login2 from './components/Login2';
-import Login3 from './components/Login3';
 import {
   Scene,
   Reducer,
@@ -20,13 +13,18 @@ import {
   Actions,
   ActionConst,
 } from 'react-native-router-flux';
+import Button from 'react-native-button';
+import Launch from './components/Launch';
+import Register from './components/Register';
+import Login from './components/Login';
+import Login2 from './components/Login2';
+import Login3 from './components/Login3';
 import Error from './components/Error';
 import Home from './components/Home';
 import TabView from './components/TabView';
 import TabIcon from './components/TabIcon';
 import EchoView from './components/EchoView';
 import NavigationDrawer from './components/NavigationDrawer';
-import Button from 'react-native-button';
 
 const styles = StyleSheet.create({
   container: {
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#474745',
   },
   tabBarSelectedItemStyle: {
-    backgroundColor: '#F7F7F7',
+    backgroundColor: '#FFFFFF',
   },
 });
 
@@ -62,7 +60,7 @@ const getSceneStyle = (/* NavigationSceneRendererProps */ props, computedProps) 
     shadowRadius: null,
   };
   if (computedProps.isActive) {
-    style.marginTop = computedProps.hideNavBar ? 0 : 64;
+    style.marginTop = computedProps.hideNavBar ? 0 : 50;
     style.marginBottom = computedProps.hideTabBar ? 0 : 50;
   }
   return style;
@@ -123,7 +121,7 @@ class Example extends Component {
             <Scene key="register" component={Register} title="Register" />
             <Scene key="register2" component={Register} title="Register2" duration={1} />
             <Scene key="home" component={Home} title="Replace" type={ActionConst.REPLACE} />
-            <Scene key="launch" component={Launch} title="Launch" initial />
+            <Scene key="launch" component={Launch} title="Launch" />
             <Scene key="login" direction="vertical" >
               <Scene key="loginModal" direction="vertical" component={Login} title="Login" />
               <Scene
@@ -143,7 +141,7 @@ class Example extends Component {
                 duration={1}
               />
             </Scene>
-            <Scene key="tabbar" component={NavigationDrawer}>
+            <Scene key="tabbar" component={NavigationDrawer} initial>
               <Scene
                 key="main"
                 tabs
