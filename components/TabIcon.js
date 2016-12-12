@@ -14,7 +14,7 @@ const propTypes = {
 };
 
 const TabIcon = (props) => (
-  <View>
+  <View style={styles.footerTab}>
     <Icon style={styles.iconAlign} name={props.iconName} />
     <Text style={styles.textAlign}>
       {props.title}
