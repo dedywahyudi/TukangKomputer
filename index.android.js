@@ -1,5 +1,5 @@
 import { AppRegistry } from 'react-native';
 
-import Example from './Example';
+import Routers from './components/';
 
-AppRegistry.registerComponent('TukangServiceKomputer', () => Example);
+AppRegistry.registerComponent('TukangServiceKomputer', () => Routers);

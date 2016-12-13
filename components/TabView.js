@@ -1,6 +1,5 @@
-import React from 'react';
-import {PropTypes} from "react";
-import {StyleSheet, Text, View} from "react-native";
+import React, { PropTypes } from 'react';
+import { Text, View } from 'react-native';
 import Button from 'react-native-button';
 import { Actions } from 'react-native-router-flux';
 
@@ -13,14 +12,6 @@ const propTypes = {
   sceneStyle: View.propTypes.style,
   title: PropTypes.string,
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 const TabView = (props, context) => {
   const drawer = context.drawer;

@@ -16,7 +16,7 @@
     "url": "git+https://github.com/dedywahyudi/TukangServiceKomputer.git"
   },
   "dependencies": {
-    "native-base": "^0.5.15",
+    "native-base": "0.5.15",
     "react": "15.3.1",
     "react-native": "0.35.0",
     "react-native-button": "^1.7.1",
