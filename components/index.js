@@ -9,6 +9,9 @@ import {
   ActionConst,
 } from 'react-native-router-flux';
 import { Button, Icon } from 'native-base';
+import TabHome from './TabHome';
+import TabMyServices from './TabMyServices';
+import TabMyAccount from './TabMyAccount';
 import TabView from './TabView';
 import TabIcon from './TabIcon';
 import NavigationDrawer from './NavigationDrawer';
@@ -26,15 +29,15 @@ const reducerCreate = params => {
 const getSceneStyle = (/* NavigationSceneRendererProps */ props, computedProps) => {
   const style = {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f7f7f7',
     shadowColor: null,
     shadowOffset: null,
     shadowOpacity: null,
     shadowRadius: null,
   };
   if (computedProps.isActive) {
-    style.marginTop = computedProps.hideNavBar ? 0 : 50;
-    style.marginBottom = computedProps.hideTabBar ? 0 : 50;
+    style.marginTop = computedProps.hideNavBar ? 0 : 54;
+    style.marginBottom = computedProps.hideTabBar ? 0 : 54;
   }
   return style;
 };
@@ -81,7 +84,7 @@ class Routers extends Component {
             >
               <Scene
                 key="tabHome"
-                component={TabView}
+                component={TabHome}
                 navigationBarStyle={styles.navigationBarStyle}
                 title="Home"
                 titleStyle={styles.colorWhite}
@@ -93,17 +96,25 @@ class Routers extends Component {
               />
               <Scene
                 key="tabMyServices"
-                component={TabView}
+                component={TabMyServices}
+                navigationBarStyle={styles.navigationBarStyle}
                 title="My Services"
+                titleStyle={styles.colorWhite}
                 iconName="ios-time"
                 icon={TabIcon}
+                renderLeftButton={this.renderMenuButton}
+                renderRightButton={this.renderRightButton}
               />
               <Scene
                 key="tabMyProfile"
-                component={TabView}
+                component={TabMyAccount}
+                navigationBarStyle={styles.navigationBarStyle}
                 title="My Account"
+                titleStyle={styles.colorWhite}
                 iconName="ios-person"
                 icon={TabIcon}
+                renderLeftButton={this.renderMenuButton}
+                renderRightButton={this.renderRightButton}
               />
             </Scene>
           </Scene>

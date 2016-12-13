@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
-import { Text, View } from 'react-native';
-import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
+import { View } from 'react-native';
+import { Icon, Text, List, ListItem } from 'native-base';
+// import { Actions } from 'react-native-router-flux';
 
 const contextTypes = {
   drawer: React.PropTypes.object,
@@ -17,20 +17,28 @@ const TabView = (props, context) => {
   const drawer = context.drawer;
   return (
     <View>
-      <Text>Tab {props.title}</Text>
-      {props.name === 'tab1_1' &&
-        <Button onPress={Actions.tab1_2}>next screen for tab1_1</Button>
-      }
-      {props.name === 'tab2_1' &&
-        <Button onPress={Actions.tab2_2}>next screen for tab2_1</Button>
-      }
-      <Button onPress={Actions.pop}>Back</Button>
-      <Button onPress={() => { drawer.close(); Actions.tab1(); }}>Switch to tab1</Button>
-      <Button onPress={() => { drawer.close(); Actions.tab2(); }}>Switch to tab2</Button>
-      <Button onPress={() => { drawer.close(); Actions.tab3(); }}>Switch to tab3</Button>
-      <Button onPress={() => { drawer.close(); Actions.tab4(); }}>Switch to tab4</Button>
-      <Button onPress={() => { drawer.close(); Actions.tab5(); }}>Switch to tab5</Button>
-      <Button onPress={() => { drawer.close(); Actions.echo(); }}>push new scene</Button>
+      <List>
+        <ListItem iconLeft iconRight>
+          <Icon name="ios-cash" style={{ color: '#4b4b4b', width: 30 }} />
+          <Text>Payment</Text>
+          <Icon name="ios-arrow-forward" />
+        </ListItem>
+        <ListItem iconLeft iconRight>
+          <Icon name="ios-megaphone" style={{ color: '#4b4b4b', width: 30 }} />
+          <Text>Newsletter & Promo Info</Text>
+          <Icon name="ios-arrow-forward" />
+        </ListItem>
+        <ListItem iconLeft iconRight>
+          <Icon name="ios-switch" style={{ color: '#4b4b4b', width: 30 }} />
+          <Text>Application Settings</Text>
+          <Icon name="ios-arrow-forward" />
+        </ListItem>
+        <ListItem iconLeft iconRight>
+          <Icon name="ios-power" style={{ color: '#4b4b4b', width: 30 }} />
+          <Text>Logout</Text>
+          <Icon name="ios-arrow-forward" />
+        </ListItem>
+      </List>
     </View>
   );
 };

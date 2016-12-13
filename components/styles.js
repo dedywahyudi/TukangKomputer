@@ -1,4 +1,3 @@
-
 const React = require('react-native');
 
 const { StyleSheet, Dimensions, Platform } = React;
@@ -15,7 +14,7 @@ module.exports = StyleSheet.create({
     backgroundColor: '#474745',
   },
   tabBarSelectedItemStyle: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#f7f7f7',
   },
   navigationBarStyle: {
     backgroundColor: '#333333',

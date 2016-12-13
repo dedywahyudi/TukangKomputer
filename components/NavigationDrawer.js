@@ -12,10 +12,14 @@ class NavigationDrawer extends React.Component {
   render() {
     const state = this.props.navigationState;
     const children = state.children;
+    const drawerStyles = {
+      drawer: { shadowColor: '#000000', shadowOpacity: 0.8},
+    }
     return (
       <Drawer
         ref="navigation"
         type="displace"
+        styles={drawerStyles}
         open={state.open}
         onOpen={() => Actions.refresh({ key: state.key, open: true })}
         onClose={() => Actions.refresh({ key: state.key, open: false })}
