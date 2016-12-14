@@ -1,19 +1,13 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, View } from 'native-base';
-import { Col, Row, Grid } from 'react-native-easy-grid';
-import StarRating from 'react-native-star-rating';
+// import { Col, Row, Grid } from 'react-native-easy-grid';
+// import StarRating from 'react-native-star-rating';
 
-import myTheme from '../../themes/base-theme';
+import myTheme from '../themes/base-theme';
 import styles from './styles';
 
-const {
-  replaceAt,
-} = actions;
-
-const sankhadeep = require('../../../img/contacts/sankhadeep.png');
+const sankhadeep = require('../../img/contacts/sankhadeep.png');
 
 class OrderDetail extends Component {
 
@@ -30,9 +24,6 @@ class OrderDetail extends Component {
     });
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('orderdetail', { key: route }, this.props.navigation.key);
-  }
 
   render() {
     return (
@@ -123,24 +114,24 @@ class OrderDetail extends Component {
               <Text>Rating Pengguna</Text>
             </ListItem>
             <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
-              <Grid>
+              {/* <Grid>
                 <Col>
-                  <Row>
-                    <StarRating
-                      disabled={false}
-                      emptyStar={'ios-star-outline'}
-                      fullStar={'ios-star'}
-                      halfStar={'ios-star-half'}
-                      iconSet={'Ionicons'}
-                      maxStars={5}
-                      rating={this.state.starCount}
-                      selectedStar={(rating) => this.onStarRatingPress(rating)}
-                      starColor={'#FF8D0D'}
-                      starSize={30}
-                    />
-                  </Row>
+                <Row>
+                <StarRating
+                disabled={false}
+                emptyStar={'ios-star-outline'}
+                fullStar={'ios-star'}
+                halfStar={'ios-star-half'}
+                iconSet={'Ionicons'}
+                maxStars={5}
+                rating={this.state.starCount}
+                selectedStar={(rating) => this.onStarRatingPress(rating)}
+                starColor={'#FF8D0D'}
+                starSize={30}
+                />
+                </Row>
                 </Col>
-              </Grid>
+              </Grid> */}
             </ListItem>
             <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
               <Text>
@@ -160,14 +151,4 @@ class OrderDetail extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-});
-
-export default connect(mapStateToProps, bindAction)(OrderDetail);
+export default OrderDetail;

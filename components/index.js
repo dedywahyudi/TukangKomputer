@@ -12,7 +12,7 @@ import { Button, Icon } from 'native-base';
 import TabHome from './TabHome';
 import TabMyServices from './TabMyServices';
 import TabMyAccount from './TabMyAccount';
-import TabView from './TabView';
+import OrderDetail from './OrderDetail';
 import TabIcon from './TabIcon';
 import NavigationDrawer from './NavigationDrawer';
 import styles from './styles';
@@ -93,7 +93,15 @@ class Routers extends Component {
                 renderLeftButton={this.renderMenuButton}
                 renderRightButton={this.renderRightButton}
                 initial
-              />
+              >
+                {/* <Scene
+                  key="orderDetail"
+                  component={OrderDetail}
+                  title="OrderDetail"
+                  onRight={() => alert('Right button')}
+                  rightTitle="Right"
+                /> */}
+              </Scene>
               <Scene
                 key="tabMyServices"
                 component={TabMyServices}
@@ -104,7 +112,21 @@ class Routers extends Component {
                 icon={TabIcon}
                 renderLeftButton={this.renderMenuButton}
                 renderRightButton={this.renderRightButton}
-              />
+              >
+                {/* <Scene
+                  key="orderDetail"
+                  navigationBarStyle={styles.navigationBarStyle}
+                  component={OrderDetail}
+                  title="OrderDetail"
+                  titleStyle={styles.colorWhite}
+                  onRight={() => alert('Right button')}
+                  rightTitle="Right"
+                  renderLeftButton={this.renderMenuButton}
+                  renderRightButton={this.renderRightButton}
+                  duration={1}
+                  panHandlers={null}
+                /> */}
+              </Scene>
               <Scene
                 key="tabMyProfile"
                 component={TabMyAccount}

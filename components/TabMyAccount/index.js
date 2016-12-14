@@ -9,7 +9,7 @@ import styles from './styles';
 export default class TabProfile extends Component { // eslint-disable-line
   render(){
     return (
-      <TabProfileNotLogin />
+      <TabProfileLogin />
     );
   }
 }

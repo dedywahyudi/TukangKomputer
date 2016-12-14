@@ -41,7 +41,7 @@ export default class TabProfileLogin extends Component { // eslint-disable-line
             </ListItem>
             <ListItem style={styles.noLeftMargin} style={styles.noBorder}>
               <Button block style={styles.btnEmail}>
-                <Text style={{ color: '#ffffff' }} >MASUK</Text>
+                <Text style={{ color: '#ffffff' }} >Login</Text>
               </Button>
             </ListItem>
             <ListItem style={styles.noLeftMargin} iconLeft iconRight style={styles.noBorder}>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Container, Text, Button, Icon } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 import HomeSwiper from './HomeSwiper';
 import styles from './styles';
 import theme from '../themes/base-theme';
@@ -20,7 +21,7 @@ class TabHome extends Component { // eslint-disable-line
 
                 <View style={styles.itemColumn}>
                   <View style={styles.itemRow}>
-                    <Button rounded style={styles.buttonAlign} onPress={() => this.replaceAt('cardList')}>
+                    <Button rounded style={styles.buttonAlign} onPress={Actions.tabMyServices}>
                       <Icon style={styles.iconAlign} name="ios-desktop-outline" />
                     </Button>
                   </View>

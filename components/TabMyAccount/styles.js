@@ -14,12 +14,21 @@ module.exports = StyleSheet.create({
   },
   btnFb: {
     backgroundColor: '#3B579D',
+    elevation: 0,
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   btnEmail: {
     backgroundColor: '#FF8D0D',
+    elevation: 0,
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   btnGoogle: {
     backgroundColor: '#DD5044',
+    elevation: 0,
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   noBorder: {
     borderBottomWidth: 0,
