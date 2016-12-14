@@ -11,9 +11,9 @@ class TabMyServices extends Component { // eslint-disable-line
 
   render() { // eslint-disable-line
     return (
-      <Container theme={theme}>
+      <Container theme={theme} style={styles.container}>
         <View style={styles.mainColumn}>
-          <Tabs locked style={{ borderBottomWidth: 0 }}>
+          <Tabs locked>
             <TabOne tabLabel="Active Services" />
             <TabTwo tabLabel="Service History" />
           </Tabs>

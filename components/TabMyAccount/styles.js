@@ -4,6 +4,9 @@ const { StyleSheet, Dimensions, Platform } = React;
 // const deviceHeight = Dimensions.get('window').height;
 
 module.exports = StyleSheet.create({
+  container: {
+    backgroundColor: '#F7F7F7',
+  },
   headerLogin: {
     backgroundColor: '#474745',
     paddingTop: 0,
@@ -62,5 +65,9 @@ module.exports = StyleSheet.create({
   dataArrow: {
     color: '#CECDD2',
     marginRight: 10,
+  },
+  iconMore: {
+    alignSelf: 'center',
+    color: '#FFF',
   },
 });

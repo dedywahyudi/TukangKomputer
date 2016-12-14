@@ -9,14 +9,14 @@ import styles from './styles';
 class TabIcon extends Component {
   render() {
     const containerStyles = {
-      backgroundColor: this.props.selected ? '#ffffff' : 'transparent',
+      backgroundColor: this.props.selected ? '#F7F7F7' : '#333333',
     };
 
     const textStyles = {
-      color: this.props.selected ? '#F6C819' : '#ffffff',
+      color: this.props.selected ? '#333333' : '#ffffff',
     };
 
-    const iconColor = this.props.selected ? '#F6C819' : '#ffffff';
+    const iconColor = this.props.selected ? '#333333' : '#ffffff';
 
     return (
       <View style={[styles.container, containerStyles]}>

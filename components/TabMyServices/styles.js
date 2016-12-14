@@ -4,20 +4,23 @@ const { StyleSheet, Dimensions, Platform } = React;
 // const deviceHeight = Dimensions.get('window').height;
 
 module.exports = StyleSheet.create({
+  container: {
+    backgroundColor: '#F7F7F7',
+  },
   mainColumn: {
     flex: 1,
     flexDirection: 'column',
   },
   sidebarIcon: {
+    flex: 0,
     fontSize: 21,
-    alignSelf: 'center',
-    color: '#fff',
-    backgroundColor: '#FF8D0D',
+    textAlign: 'center',
+    color: '#ffffff',
+    backgroundColor: '#FFCE00',
     width: 37,
     height: 37,
+    lineHeight: 30,
     borderRadius: 18,
-    paddingLeft: 10,
-    paddingTop: (Platform.OS === 'android') ? 8 : 5,
   },
   dataGrid: {
     paddingLeft: 10,
@@ -34,7 +37,7 @@ module.exports = StyleSheet.create({
   statusYellow: {
     fontSize: 12,
     lineHeight: 18,
-    color: '#FF8D0D',
+    color: '#FFCE00',
   },
   statusRed: {
     fontSize: 12,
@@ -59,5 +62,9 @@ module.exports = StyleSheet.create({
   dataArrow: {
     color: '#CECDD2',
     marginRight: 10,
+  },
+  noLeftMargin: {
+    marginLeft: 0,
+    paddingLeft: 18,
   },
 });

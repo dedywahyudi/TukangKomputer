@@ -12,14 +12,10 @@ class NavigationDrawer extends React.Component {
   render() {
     const state = this.props.navigationState;
     const children = state.children;
-    const drawerStyles = {
-      drawer: { shadowColor: '#000000', shadowOpacity: 0.8},
-    }
     return (
       <Drawer
         ref="navigation"
         type="displace"
-        styles={drawerStyles}
         open={state.open}
         onOpen={() => Actions.refresh({ key: state.key, open: true })}
         onClose={() => Actions.refresh({ key: state.key, open: false })}
@@ -28,8 +24,17 @@ class NavigationDrawer extends React.Component {
         openDrawerOffset={0.2}
         panCloseMask={0.2}
         negotiatePan
-        tweenHandler={(ratio) => ({
-          main: { opacity: Math.max(0.54, 1 - ratio) },
+        // tweenHandler={(ratio) => ({
+        //   main: { opacity: Math.max(0.54, 1 - ratio) },
+        // })}
+        tweenHandler={ratio => ({
+          main: {
+            opacity: 1,
+          },
+          mainOverlay: {
+            opacity: ratio / 2,
+            backgroundColor: 'black',
+          },
         })}
       >
         <DefaultRenderer navigationState={children[0]} onNavigate={this.props.onNavigate} />

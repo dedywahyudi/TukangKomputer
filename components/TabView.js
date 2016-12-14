@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import { Icon, Text, List, ListItem } from 'native-base';
 // import { Actions } from 'react-native-router-flux';
+import styles from './styles';
 
 const contextTypes = {
   drawer: React.PropTypes.object,
@@ -18,22 +19,22 @@ const TabView = (props, context) => {
   return (
     <View>
       <List>
-        <ListItem iconLeft iconRight>
+        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
           <Icon name="ios-cash" style={{ color: '#4b4b4b', width: 30 }} />
           <Text>Payment</Text>
           <Icon name="ios-arrow-forward" />
         </ListItem>
-        <ListItem iconLeft iconRight>
+        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
           <Icon name="ios-megaphone" style={{ color: '#4b4b4b', width: 30 }} />
           <Text>Newsletter & Promo Info</Text>
           <Icon name="ios-arrow-forward" />
         </ListItem>
-        <ListItem iconLeft iconRight>
+        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
           <Icon name="ios-switch" style={{ color: '#4b4b4b', width: 30 }} />
           <Text>Application Settings</Text>
           <Icon name="ios-arrow-forward" />
         </ListItem>
-        <ListItem iconLeft iconRight>
+        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
           <Icon name="ios-power" style={{ color: '#4b4b4b', width: 30 }} />
           <Text>Logout</Text>
           <Icon name="ios-arrow-forward" />

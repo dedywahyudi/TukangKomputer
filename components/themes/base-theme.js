@@ -1,5 +1,4 @@
 import color from 'color';
-
 import { Platform } from 'react-native';
 
 export default {
@@ -117,7 +116,7 @@ export default {
 
   // FooterTab
   tabBarTextColor: (Platform.OS === 'ios') ? '#ffc788' : '#ffc788',
-  tabBarActiveTextColor: (Platform.OS === 'ios') ? '#FFFFFF' : '#FFFFFF',
+  tabBarActiveTextColor: (Platform.OS === 'ios') ? '#FFCE00' : '#FFFFFF',
   tabActiveBgColor: (Platform.OS === 'ios') ? undefined : undefined,
 
   // Header

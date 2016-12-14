@@ -4,6 +4,9 @@ const { StyleSheet, Dimensions, Platform } = React;
 // const deviceHeight = Dimensions.get('window').height;
 
 module.exports = StyleSheet.create({
+  container: {
+    backgroundColor: '#F7F7F7',
+  },
   mainColumn: {
     flex: 1,
     flexDirection: 'column',
@@ -22,6 +25,8 @@ module.exports = StyleSheet.create({
     flex: 0.3,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 10,
   },
   itemColumn: {
     flex: 1,
@@ -31,13 +36,15 @@ module.exports = StyleSheet.create({
   },
   buttonAlign: {
     alignSelf: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#F6C819',
     width: 60,
     height: 60,
+    shadowRadius: 0,
+    elevation: 0,
   },
   buttonMore: {
     alignSelf: 'center',
-    backgroundColor: '#FF8D0D',
+    backgroundColor: '#F6C819',
     width: 60,
     height: 60,
   },
@@ -45,10 +52,11 @@ module.exports = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     fontSize: 12,
+    color: '#474745',
   },
   iconAlign: {
     alignSelf: 'center',
-    color: '#FF8D0D',
+    color: '#FFF',
     fontSize: 30,
     lineHeight: 30,
   },

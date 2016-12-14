@@ -9,13 +9,13 @@ class TabTwo extends Component { // eslint-disable-line
 
   render() { // eslint-disable-line
     return (
-      <Container style={styles.container}>
-        <Content padder>
+      <Container>
+        <Content>
           <List>
-            {/* <ListItem itemDivider>
+            {/* <ListItem style={styles.noLeftMargin} itemDivider>
               <Text>2016</Text>
             </ListItem> */}
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-desktop-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -23,7 +23,7 @@ class TabTwo extends Component { // eslint-disable-line
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-laptop-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -31,7 +31,7 @@ class TabTwo extends Component { // eslint-disable-line
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-bug-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -39,7 +39,7 @@ class TabTwo extends Component { // eslint-disable-line
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-folder-open-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -47,7 +47,7 @@ class TabTwo extends Component { // eslint-disable-line
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-construct-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -55,7 +55,7 @@ class TabTwo extends Component { // eslint-disable-line
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-link-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -63,7 +63,7 @@ class TabTwo extends Component { // eslint-disable-line
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-sync-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -71,7 +71,7 @@ class TabTwo extends Component { // eslint-disable-line
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-print-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>

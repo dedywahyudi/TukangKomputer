@@ -14,7 +14,7 @@ module.exports = StyleSheet.create({
     backgroundColor: '#474745',
   },
   tabBarSelectedItemStyle: {
-    backgroundColor: '#f7f7f7',
+    backgroundColor: '#F7F7F7',
   },
   navigationBarStyle: {
     backgroundColor: '#333333',
@@ -42,5 +42,9 @@ module.exports = StyleSheet.create({
   },
   icon: {
     marginBottom: 0,
+  },
+  noLeftMargin: {
+    marginLeft: 0,
+    paddingLeft: 18,
   },
 });
