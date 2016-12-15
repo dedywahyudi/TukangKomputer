@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Content, Button, Icon, List, ListItem, Text, Thumbnail, View } from 'native-base';
+import { TouchableOpacity } from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import StarRating from 'react-native-star-rating';
+import { Actions } from 'react-native-router-flux';
 
 import myTheme from '../themes/base-theme';
 import styles from './styles';
@@ -35,7 +37,7 @@ class OrderDetail extends Component {
             <ListItem itemDivider>
               <Text>Service Order No: #1217534</Text>
             </ListItem>
-            <ListItem style={styles.noBorder}>
+            <ListItem style={[styles.noBorder, styles.noMarginLeft]}>
               <Grid style={styles.tukangInfo}>
                 <Col>
                   <Button rounded primary style={styles.buttonAlign}>
@@ -43,7 +45,9 @@ class OrderDetail extends Component {
                   </Button>
                 </Col>
                 <Col>
-                  <Thumbnail rounded size={100} source={sankhadeep} style={styles.thumbAlign} />
+                  <TouchableOpacity onPress={Actions.profileDetail}>
+                    <Thumbnail rounded size={100} source={sankhadeep} style={styles.thumbAlign} onPress={Actions.profiledetail} />
+                  </TouchableOpacity>
                 </Col>
                 <Col>
                   <Button rounded primary style={styles.buttonAlign}>
@@ -52,14 +56,18 @@ class OrderDetail extends Component {
                 </Col>
               </Grid>
             </ListItem>
-            <ListItem style={[styles.noBorder, styles.skillList]}>
-              <Grid style={styles.tukangInfo}>
-                <Row>
+            <ListItem style={[styles.noBorder]}>
+              <Grid>
+                <Row style={styles.rowDetail}>
                   <Text style={styles.textCenter}>Nama Tukang</Text>
                 </Row>
                 <Row>
-                  <Text style={styles.textCenter}>Aktif Sejak: September 2016</Text>
+                  <Text style={styles.textNotes}>Aktif Sejak: September 2016</Text>
                 </Row>
+              </Grid>
+            </ListItem>
+            <ListItem style={[styles.noBorder, styles.skillList]}>
+              <Grid style={styles.tukangInfo}>
                 <Row>
                   <Icon name="ios-desktop-outline" style={styles.skillIcon} />
                   <Icon name="ios-laptop-outline" style={styles.skillIcon} />

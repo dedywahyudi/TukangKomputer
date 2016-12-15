@@ -79,4 +79,8 @@ module.exports = StyleSheet.create({
     alignSelf: 'center',
     color: '#FFF',
   },
+  noLeftMargin: {
+    marginLeft: 0,
+    paddingLeft: 18,
+  },
 });

@@ -1,19 +1,15 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, View } from 'native-base';
+import { Container, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, View } from 'native-base';
+import { TouchableOpacity } from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import StarRating from 'react-native-star-rating';
+import { Actions } from 'react-native-router-flux';
 
-import myTheme from '../../themes/base-theme';
+import myTheme from '../themes/base-theme';
 import styles from './styles';
 
-const {
-  replaceAt,
-} = actions;
-
-const sankhadeep = require('../../../img/contacts/sankhadeep.png');
+const sankhadeep = require('../../img/contacts/sankhadeep.png');
 
 class ProfileDetail extends Component {
 
@@ -30,60 +26,67 @@ class ProfileDetail extends Component {
     });
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('profiledetail', { key: route }, this.props.navigation.key);
-  }
 
   render() {
     return (
       <Container theme={myTheme} style={styles.container}>
-        <Header>
-          <Button transparent onPress={() => this.replaceAt('anatomy')}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
-          <Title>Profile Detail</Title>
-        </Header>
-
         <Content>
           <List>
             <ListItem itemDivider>
               <Text>Data Detail:</Text>
             </ListItem>
-            <ListItem style={styles.noBorder}>
-              <Thumbnail rounded size={60} source={sankhadeep} />
-              <Text>Nama Tukang</Text>
-              <Text note>Aktif Sejak: September 2016</Text>
+            <ListItem style={[styles.noBorder, styles.noMarginLeft]}>
+              <Grid style={styles.tukangInfo}>
+                <Col>
+                  <Button rounded primary style={styles.buttonAlign}>
+                    <Icon name="ios-call" style={styles.iconAlign} />
+                  </Button>
+                </Col>
+                <Col>
+                  <TouchableOpacity onPress={Actions.profileDetail}>
+                    <Thumbnail rounded size={100} source={sankhadeep} style={styles.thumbAlign} onPress={Actions.profiledetail} />
+                  </TouchableOpacity>
+                </Col>
+                <Col>
+                  <Button rounded primary style={styles.buttonAlign}>
+                    <Icon name="ios-text" style={styles.iconAlign} />
+                  </Button>
+                </Col>
+              </Grid>
             </ListItem>
-            <ListItem itemDivider>
-              <Text>Keahlian:</Text>
+            <ListItem style={[styles.noBorder]}>
+              <Grid>
+                <Row style={styles.rowDetail}>
+                  <Text style={styles.textCenter}>Nama Tukang</Text>
+                </Row>
+                <Row>
+                  <Text style={styles.textNotes}>Aktif Sejak: September 2016</Text>
+                </Row>
+              </Grid>
             </ListItem>
-            <ListItem style={styles.noBorder} onPress={() => this.replaceAt('profiledetail')}>
-              <View style={styles.skillList}>
-                <Icon name="ios-desktop-outline" style={styles.skillIcon} />
-                <Icon name="ios-laptop-outline" style={styles.skillIcon} />
-                <Icon name="ios-print-outline" style={styles.skillIcon} />
-                <Icon name="ios-bug-outline" style={styles.skillIcon} />
-              </View>
-            </ListItem>
-            <ListItem itemDivider>
-              <Text>Total Rating:</Text>
-            </ListItem>
-            <ListItem style={styles.noBorder}>
-              <View style={styles.skillList}>
-                <StarRating
-                  disabled={false}
-                  emptyStar={'ios-star-outline'}
-                  fullStar={'ios-star'}
-                  halfStar={'ios-star-half'}
-                  iconSet={'Ionicons'}
-                  maxStars={5}
-                  rating={this.state.starCount}
-                  selectedStar={(rating) => this.onStarRatingPress(rating)}
-                  starColor={'#FF8D0D'}
-                  starSize={30}
-                />
-              </View>
+            <ListItem style={[styles.noBorder, styles.skillList]}>
+              <Grid style={styles.tukangInfo}>
+                <Row>
+                  <Icon name="ios-desktop-outline" style={styles.skillIcon} />
+                  <Icon name="ios-laptop-outline" style={styles.skillIcon} />
+                  <Icon name="ios-print-outline" style={styles.skillIcon} />
+                  <Icon name="ios-bug-outline" style={styles.skillIcon} />
+                </Row>
+                <Row>
+                  <StarRating
+                    disabled={false}
+                    emptyStar={'ios-star-outline'}
+                    fullStar={'ios-star'}
+                    halfStar={'ios-star-half'}
+                    iconSet={'Ionicons'}
+                    maxStars={5}
+                    rating={this.state.starCount}
+                    selectedStar={(rating) => this.onStarRatingPress(rating)}
+                    starColor={'#FF8D0D'}
+                    starSize={30}
+                  />
+                </Row>
+              </Grid>
             </ListItem>
             <ListItem itemDivider>
               <Text>Daftar Service Terakhir:</Text>
@@ -159,14 +162,4 @@ class ProfileDetail extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-});
-
-export default connect(mapStateToProps, bindAction)(ProfileDetail);
+export default ProfileDetail;

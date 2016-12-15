@@ -1,4 +1,3 @@
-
 const React = require('react-native');
 
 const { StyleSheet, Dimensions, Platform } = React;
@@ -90,7 +89,7 @@ module.exports = StyleSheet.create({
   },
   thumbAlign: {
     alignSelf: 'center',
-    borderWidth: 2,
+    borderWidth: 4,
     borderColor: '#F6C819',
   },
   buttonAlign: {
@@ -108,9 +107,20 @@ module.exports = StyleSheet.create({
     lineHeight: 40,
   },
   textCenter: {
+    flex: 1,
+    flexDirection: 'row',
     flexWrap: 'wrap',
     textAlign: 'center',
-    alignSelf: 'center',
+  },
+  rowDetail: {
+  },
+  textNotes: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    textAlign: 'center',
+    fontSize: 12,
+    color: '#CECDD2',
   },
   skillIcon: {
     alignSelf: 'center',
@@ -170,15 +180,19 @@ module.exports = StyleSheet.create({
     backgroundColor: '#fff',
   },
   tukangInfo: {
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
   },
   skillList: {
-    justifyContent: 'center',
-    alignItems: 'center',
     flex: 1,
+    marginTop: 0,
+    paddingTop: 0,
+    marginLeft: 0,
+  },
+  noMarginLeft: {
+    marginLeft: 0,
   },
 });

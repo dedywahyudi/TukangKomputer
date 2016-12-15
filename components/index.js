@@ -14,7 +14,10 @@ import InputHardware from './InputHardware';
 import LokasiTukang from './LokasiTukang';
 import TabMyServices from './TabMyServices';
 import TabMyAccount from './TabMyAccount';
+import TabProfileLogin from './TabMyAccount/TabProfileLogin';
+import TabProfileNotLogin from './TabMyAccount/TabProfileNotLogin';
 import OrderDetail from './OrderDetail';
+import ProfileDetail from './ProfileDetail';
 import TabIcon from './TabIcon';
 import NavigationDrawer from './NavigationDrawer';
 import styles from './styles';
@@ -117,12 +120,14 @@ class Routers extends Component {
                   component={InputHardware}
                   title="Input Hardware"
                   renderBackButton={this.customBackButton}
+                  hideTabBar
                 />
                 <Scene
                   key="lokasiTukang"
                   component={LokasiTukang}
-                  title="Map"
+                  title="Lokasi User"
                   renderBackButton={this.customBackButton}
+                  hideTabBar
                 />
               </Scene>
               <Scene
@@ -147,22 +152,42 @@ class Routers extends Component {
                   title="Order Detail"
                   titleStyle={styles.colorWhite}
                   renderBackButton={this.customBackButton}
-                  duration={1}
-                  panHandlers={null}
+                  hideTabBar
+                />
+                <Scene
+                  key="profileDetail"
+                  component={ProfileDetail}
+                  title="Profile Detail"
+                  titleStyle={styles.colorWhite}
+                  renderBackButton={this.customBackButton}
                   hideTabBar
                 />
               </Scene>
               <Scene
                 key="tabMyProfile"
-                component={TabMyAccount}
                 navigationBarStyle={styles.navigationBarStyle}
                 title="My Account"
                 titleStyle={styles.colorWhite}
                 iconName="ios-person"
                 icon={TabIcon}
-                renderLeftButton={this.renderMenuButton}
-                renderRightButton={this.renderRightButton}
-              />
+              >
+                <Scene
+                  key="tabProfileLogin"
+                  component={TabProfileLogin}
+                  title="My Account"
+                  titleStyle={styles.colorWhite}
+                  renderLeftButton={this.renderMenuButton}
+                  renderRightButton={this.renderRightButton}
+                />
+                <Scene
+                  key="tabProfileNotLogin"
+                  component={TabProfileNotLogin}
+                  title="Logged In"
+                  titleStyle={styles.colorWhite}
+                  renderBackButton={this.customBackButton}
+                  renderRightButton={this.renderRightButton}
+                />
+              </Scene>
             </Scene>
           </Scene>
         </Scene>

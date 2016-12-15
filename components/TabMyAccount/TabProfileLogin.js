@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Container, Button, Content, Icon, Text, List, ListItem, Input, InputGroup } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import {Actions} from "react-native-router-flux";
 
 import styles from './styles';
 import theme from '../themes/base-theme';
@@ -10,7 +11,7 @@ export default class TabProfileLogin extends Component { // eslint-disable-line
   render (){
     return (
       <Container theme={theme} style={styles.container}>
-        <Content padder>
+        <Content>
           <List>
             <ListItem style={styles.noBorder}>
               <Button block style={styles.btnFb}>
@@ -40,7 +41,7 @@ export default class TabProfileLogin extends Component { // eslint-disable-line
               </InputGroup>
             </ListItem>
             <ListItem style={styles.noBorder}>
-              <Button block style={styles.btnEmail}>
+              <Button block style={styles.btnEmail} onPress={Actions.tabProfileNotLogin}>
                 <Text style={{ color: '#ffffff' }} >Login</Text>
               </Button>
             </ListItem>
