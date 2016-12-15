@@ -1,8 +1,7 @@
-
 import React, { Component } from 'react';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, View } from 'native-base';
-// import { Col, Row, Grid } from 'react-native-easy-grid';
-// import StarRating from 'react-native-star-rating';
+import { Container, Content, Button, Icon, List, ListItem, Text, Thumbnail, View } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
+import StarRating from 'react-native-star-rating';
 
 import myTheme from '../themes/base-theme';
 import styles from './styles';
@@ -28,14 +27,6 @@ class OrderDetail extends Component {
   render() {
     return (
       <Container theme={myTheme} style={styles.container}>
-        <Header>
-          <Button transparent onPress={() => this.replaceAt('anatomy')}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
-          <Title>Order Detail</Title>
-        </Header>
-
         <Content>
           <List>
             <ListItem style={styles.listGreen}>
@@ -45,32 +36,42 @@ class OrderDetail extends Component {
               <Text>Service Order No: #1217534</Text>
             </ListItem>
             <ListItem style={styles.noBorder}>
-              <Thumbnail rounded size={60} source={sankhadeep} />
-              <Text>Nama Tukang</Text>
-              <Text note>Aktif Sejak: September 2016</Text>
-              <View style={styles.skillList}>
-                <Icon name="ios-desktop-outline" style={styles.skillIcon} />
-                <Icon name="ios-laptop-outline" style={styles.skillIcon} />
-                <Icon name="ios-print-outline" style={styles.skillIcon} />
-                <Icon name="ios-bug-outline" style={styles.skillIcon} />
-              </View>
+              <Grid style={styles.tukangInfo}>
+                <Col>
+                  <Button rounded primary style={styles.buttonAlign}>
+                    <Icon name="ios-call" style={styles.iconAlign} />
+                  </Button>
+                </Col>
+                <Col>
+                  <Thumbnail rounded size={100} source={sankhadeep} style={styles.thumbAlign} />
+                </Col>
+                <Col>
+                  <Button rounded primary style={styles.buttonAlign}>
+                    <Icon name="ios-text" style={styles.iconAlign} />
+                  </Button>
+                </Col>
+              </Grid>
             </ListItem>
-            <ListItem style={styles.noBorder}>
-              <Button block rounded primary>
-                <Icon name="ios-call" style={{ color: '#ffffff' }} />
-                <Text>Telephone</Text>
-              </Button>
-            </ListItem>
-            <ListItem style={styles.noBorder}>
-              <Button block rounded primary>
-                <Icon name="ios-text" style={{ color: '#ffffff' }} />
-                <Text>SMS</Text>
-              </Button>
+            <ListItem style={[styles.noBorder, styles.skillList]}>
+              <Grid style={styles.tukangInfo}>
+                <Row>
+                  <Text style={styles.textCenter}>Nama Tukang</Text>
+                </Row>
+                <Row>
+                  <Text style={styles.textCenter}>Aktif Sejak: September 2016</Text>
+                </Row>
+                <Row>
+                  <Icon name="ios-desktop-outline" style={styles.skillIcon} />
+                  <Icon name="ios-laptop-outline" style={styles.skillIcon} />
+                  <Icon name="ios-print-outline" style={styles.skillIcon} />
+                  <Icon name="ios-bug-outline" style={styles.skillIcon} />
+                </Row>
+              </Grid>
             </ListItem>
             <ListItem itemDivider>
               <Text>Deskripsi Masalah</Text>
             </ListItem>
-            <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
+            <ListItem style={styles.noBorder} >
               <Text>
                 <Text style={styles.rowNotes}>
                   Tanggal Selesai: 29 November 2016 {"\n"}
@@ -80,27 +81,7 @@ class OrderDetail extends Component {
                 </Text>
               </Text>
             </ListItem>
-            <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
-              <Text>
-                <Text style={styles.rowNotes}>
-                  Tanggal Selesai: 29 November 2016 {"\n"}
-                </Text>
-                <Text style={styles.rowTitle}>
-                  Setelah dihidupkan PC tidak bereaksi apa-apa, tidak ada tampilan di monitor, tidak ada lampu indikator (led) yang menyala, kipas power supply tidak berputar, lampu indikator pada monitor tidak menyala.
-                </Text>
-              </Text>
-            </ListItem>
-            <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
-              <Text>
-                <Text style={styles.rowNotes}>
-                  Tanggal Selesai: 29 November 2016 {"\n"}
-                </Text>
-                <Text style={styles.rowTitle}>
-                  Setelah dihidupkan PC tidak bereaksi apa-apa, tidak ada tampilan di monitor, tidak ada lampu indikator (led) yang menyala, kipas power supply tidak berputar, lampu indikator pada monitor tidak menyala.
-                </Text>
-              </Text>
-            </ListItem>
-            <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
+            <ListItem style={styles.noBorder} >
               <Text>
                 <Text style={styles.rowNotes}>
                   Tanggal Selesai: 29 November 2016 {"\n"}
@@ -114,29 +95,29 @@ class OrderDetail extends Component {
               <Text>Rating Pengguna</Text>
             </ListItem>
             <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
-              {/* <Grid>
+              <Grid>
                 <Col>
-                <Row>
-                <StarRating
-                disabled={false}
-                emptyStar={'ios-star-outline'}
-                fullStar={'ios-star'}
-                halfStar={'ios-star-half'}
-                iconSet={'Ionicons'}
-                maxStars={5}
-                rating={this.state.starCount}
-                selectedStar={(rating) => this.onStarRatingPress(rating)}
-                starColor={'#FF8D0D'}
-                starSize={30}
-                />
-                </Row>
+                  <Row>
+                    <StarRating
+                      disabled={true}
+                      emptyStar={'ios-star-outline'}
+                      fullStar={'ios-star'}
+                      halfStar={'ios-star-half'}
+                      iconSet={'Ionicons'}
+                      maxStars={5}
+                      rating={this.state.starCount}
+                      selectedStar={(rating) => this.onStarRatingPress(rating)}
+                      starColor={'#F6C819'}
+                      starSize={30}
+                    />
+                  </Row>
                 </Col>
-              </Grid> */}
+              </Grid>
             </ListItem>
-            <ListItem style={styles.noBorder} onPress={() => this.replaceAt('orderdetail')}>
+            <ListItem style={styles.noBorder}>
               <Text>
                 <Text style={styles.rowNotes}>
-                  Martha Hidayat {"\n"}
+                  Martha Hidayat | 20 Agustus 2016{"\n"}
                 </Text>
                 <Text style={styles.rowTitle}>
                   “Service Bintang 5. Hasil kerjanya rapi,

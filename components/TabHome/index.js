@@ -21,7 +21,7 @@ class TabHome extends Component { // eslint-disable-line
 
                 <View style={styles.itemColumn}>
                   <View style={styles.itemRow}>
-                    <Button rounded style={styles.buttonAlign} onPress={Actions.tabMyServices}>
+                    <Button rounded style={styles.buttonAlign} onPress={Actions.inputHardware}>
                       <Icon style={styles.iconAlign} name="ios-desktop-outline" />
                     </Button>
                   </View>

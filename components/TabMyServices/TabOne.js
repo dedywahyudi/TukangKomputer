@@ -16,7 +16,7 @@ const TabOne = (props, context) => {
     <Container>
       <Content>
         <List>
-          <ListItem style={styles.noLeftMargin} iconLeft iconRight onPress={Actions.tabHome}>
+          <ListItem style={styles.noLeftMargin} iconLeft iconRight onPress={Actions.orderDetail}>
             <Icon name="ios-desktop-outline" style={styles.sidebarIcon} />
             <Grid style={styles.dataGrid}>
               <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>

@@ -10,6 +10,8 @@ import {
 } from 'react-native-router-flux';
 import { Button, Icon } from 'native-base';
 import TabHome from './TabHome';
+import InputHardware from './InputHardware';
+import LokasiTukang from './LokasiTukang';
 import TabMyServices from './TabMyServices';
 import TabMyAccount from './TabMyAccount';
 import OrderDetail from './OrderDetail';
@@ -66,6 +68,18 @@ class Routers extends Component {
     );
   }
 
+  customBackButton() {
+    return (
+      <Button
+        transparent
+        style={styles.leftMenuStyle}
+        onPress={() => { Actions.pop(); } }
+      >
+        <Icon name="ios-arrow-back" style={styles.colorWhite} />
+      </Button>
+    );
+  }
+
   render() {
     return (
       <Router createReducer={reducerCreate} getSceneStyle={getSceneStyle}>
@@ -84,48 +98,59 @@ class Routers extends Component {
             >
               <Scene
                 key="tabHome"
-                component={TabHome}
                 navigationBarStyle={styles.navigationBarStyle}
                 title="Home"
                 titleStyle={styles.colorWhite}
                 iconName="ios-home"
                 icon={TabIcon}
-                renderLeftButton={this.renderMenuButton}
-                renderRightButton={this.renderRightButton}
                 initial
               >
-                {/* <Scene
-                  key="orderDetail"
-                  component={OrderDetail}
-                  title="OrderDetail"
-                  onRight={() => alert('Right button')}
-                  rightTitle="Right"
-                /> */}
+                <Scene
+                  key="tabHomeStart"
+                  component={TabHome}
+                  title="Home"
+                  renderLeftButton={this.renderMenuButton}
+                  renderRightButton={this.renderRightButton}
+                />
+                <Scene
+                  key="inputHardware"
+                  component={InputHardware}
+                  title="Input Hardware"
+                  renderBackButton={this.customBackButton}
+                />
+                <Scene
+                  key="lokasiTukang"
+                  component={LokasiTukang}
+                  title="Map"
+                  renderBackButton={this.customBackButton}
+                />
               </Scene>
               <Scene
                 key="tabMyServices"
-                component={TabMyServices}
                 navigationBarStyle={styles.navigationBarStyle}
                 title="My Services"
                 titleStyle={styles.colorWhite}
                 iconName="ios-time"
                 icon={TabIcon}
-                renderLeftButton={this.renderMenuButton}
-                renderRightButton={this.renderRightButton}
               >
-                {/* <Scene
-                  key="orderDetail"
-                  navigationBarStyle={styles.navigationBarStyle}
-                  component={OrderDetail}
-                  title="OrderDetail"
+                <Scene
+                  key="tabMyServicesStart"
+                  component={TabMyServices}
+                  title="My Services"
                   titleStyle={styles.colorWhite}
-                  onRight={() => alert('Right button')}
-                  rightTitle="Right"
                   renderLeftButton={this.renderMenuButton}
                   renderRightButton={this.renderRightButton}
+                />
+                <Scene
+                  key="orderDetail"
+                  component={OrderDetail}
+                  title="Order Detail"
+                  titleStyle={styles.colorWhite}
+                  renderBackButton={this.customBackButton}
                   duration={1}
                   panHandlers={null}
-                /> */}
+                  hideTabBar
+                />
               </Scene>
               <Scene
                 key="tabMyProfile"

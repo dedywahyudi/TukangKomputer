@@ -7,8 +7,74 @@ const { StyleSheet, Dimensions, Platform } = React;
 module.exports = StyleSheet.create({
   container: {
     backgroundColor: '#f7f7f7',
-    flex: 1,
   },
+  // mainColumn: {
+  //   flex: 1,
+  //   flexDirection: 'column',
+  // },
+  // mainRow: {
+  //   // flex: 0.25,
+  //   // paddingTop: 10,
+  //   paddingBottom: 10,
+  // },
+  // innerColumn: {
+  //   flex: 1,
+  //   flexDirection: 'row',
+  // },
+  // innerRow: {
+  //   flexDirection: 'row',
+  //   flex: 0.3,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  // },
+  // itemColumn: {
+  //   flex: 1,
+  // },
+  // itemRow: {
+  //   marginTop: (Platform.OS === 'ios') ? 4 : 0,
+  // },
+  // buttonAlign: {
+  //   alignSelf: 'center',
+  //   backgroundColor: '#fff',
+  //   width: 60,
+  //   height: 60,
+  // },
+  // buttonMore: {
+  //   alignSelf: 'center',
+  //   backgroundColor: '#FF8D0D',
+  //   width: 60,
+  //   height: 60,
+  // },
+  // textAlign: {
+  //   flex: 1,
+  //   alignSelf: 'center',
+  //   fontSize: 12,
+  // },
+  // iconAlign: {
+  //   alignSelf: 'center',
+  //   color: '#FF8D0D',
+  //   fontSize: 30,
+  //   lineHeight: 30,
+  // },
+  // iconMore: {
+  //   alignSelf: 'center',
+  //   color: '#FFF',
+  // },
+  // fabStyle: {
+  //   backgroundColor: '#5EAC02',
+  // },
+  // logo: {
+  //   position: 'absolute',
+  //   left: (Platform.OS === 'android') ? 40 : 50,
+  //   top: (Platform.OS === 'android') ? 35 : 60,
+  //   width: 280,
+  //   height: 100,
+  // },
+  // iconLogo: {
+  //   backgroundColor: '#5EAC02',
+  //   width: 103,
+  //   height: 38,
+  // },
   dataGrid: {
     paddingLeft: 10,
   },
@@ -64,12 +130,16 @@ module.exports = StyleSheet.create({
   listText: {
     paddingLeft: 10,
     fontSize: 14,
-    lineHeight: 16,
     color: '#ffffff',
   },
   statusCompleted: {
     fontSize: 12,
     color: '#CECDD2',
+  },
+  skillList: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 10,
   },
   ratingAlign: {
     borderBottomWidth: 0,
@@ -88,42 +158,29 @@ module.exports = StyleSheet.create({
     paddingLeft: 10,
     paddingTop: (Platform.OS === 'android') ? 8 : 5,
   },
-  thumbAlign: {
-    alignSelf: 'center',
-    borderWidth: 2,
-    borderColor: '#F6C819',
-  },
-  buttonAlign: {
-    alignSelf: 'center',
-    backgroundColor: '#F6C819',
-    width: 60,
-    height: 60,
-    shadowRadius: 0,
-    elevation: 0,
-  },
-  iconAlign: {
-    alignSelf: 'center',
-    color: '#FFF',
-    fontSize: 40,
-    lineHeight: 40,
-  },
-  textCenter: {
-    flexWrap: 'wrap',
-    textAlign: 'center',
-    alignSelf: 'center',
-  },
   skillIcon: {
-    alignSelf: 'center',
     fontSize: 21,
-    textAlign: 'center',
-    color: '#ffffff',
-    backgroundColor: '#FFCE00',
+    color: '#fff',
+    backgroundColor: '#FF8D0D',
     width: 37,
     height: 37,
-    lineHeight: 30,
     borderRadius: 18,
+    paddingLeft: 10,
     marginRight: 10,
+    paddingTop: (Platform.OS === 'android') ? 8 : 5,
   },
+  // dataArrow: {
+  //   color: '#CECDD2',
+  // },
+  // btnFb: {
+  //   backgroundColor: '#3B579D',
+  // },
+  // btnEmail: {
+  //   backgroundColor: '#FF8D0D',
+  // },
+  // btnGoogle: {
+  //   backgroundColor: '#DD5044',
+  // },
   noBorder: {
     borderBottomWidth: 0,
   },
@@ -169,16 +226,7 @@ module.exports = StyleSheet.create({
   btnEditProfile: {
     backgroundColor: '#fff',
   },
-  tukangInfo: {
-    marginTop: 20,
-    marginBottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-  },
-  skillList: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
+  rowRating: {
+    height: 27,
   },
 });

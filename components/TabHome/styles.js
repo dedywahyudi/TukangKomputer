@@ -42,12 +42,6 @@ module.exports = StyleSheet.create({
     shadowRadius: 0,
     elevation: 0,
   },
-  buttonMore: {
-    alignSelf: 'center',
-    backgroundColor: '#F6C819',
-    width: 60,
-    height: 60,
-  },
   textAlign: {
     flex: 1,
     alignSelf: 'center',
@@ -59,6 +53,9 @@ module.exports = StyleSheet.create({
     color: '#FFF',
     fontSize: 30,
     lineHeight: 30,
+  },
+  alignButtonCenter: {
+    alignItems: 'center',
   },
   iconMore: {
     alignSelf: 'center',
