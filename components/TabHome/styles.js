@@ -5,7 +5,7 @@ const { StyleSheet, Dimensions, Platform } = React;
 
 module.exports = StyleSheet.create({
   container: {
-    backgroundColor: '#F7F7F7',
+    backgroundColor: '#333333',
   },
   mainColumn: {
     flex: 1,
@@ -46,11 +46,11 @@ module.exports = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     fontSize: 12,
-    color: '#474745',
+    color: '#FFFFFF',
   },
   iconAlign: {
     alignSelf: 'center',
-    color: '#FFF',
+    color: '#333333',
     fontSize: 30,
     lineHeight: 30,
   },
@@ -59,6 +59,6 @@ module.exports = StyleSheet.create({
   },
   iconMore: {
     alignSelf: 'center',
-    color: '#FFF',
+    color: '#333333',
   },
 });

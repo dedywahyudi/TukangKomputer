@@ -6,7 +6,6 @@ export default {
   badgeBg: '#ED1727',
   badgeColor: '#fff',
 
-
     // Button
   btnFontFamily: (Platform.OS === 'ios') ? 'HelveticaNeue' : 'HelveticaNeue',
   btnDisabledBg: '#b5b5b5',
@@ -85,7 +84,7 @@ export default {
   brandSidebar: '#252932',
 
   // Color Tukang
-  colorTukangYellow: '#FF8D0D',
+  colorTukangYellow: '#FFCE00',
   colorTukangOrange: '#FF8D0D',
   colorTukangBlack: '#000000',
   colorTukangGrey: '#4b4b4b',
@@ -170,8 +169,8 @@ export default {
 
 
   // List
-  listBorderColor: '#ddd',
-  listDividerBg: '#ddd',
+  listBorderColor: '#474745',
+  listDividerBg: '#474745',
   listItemHeight: 45,
   listItemPadding: 9,
   listNoteColor: '#808080',
@@ -202,13 +201,13 @@ export default {
   // tabFontSize: 15,
   // tabTextColor: '#fff',
   tabBgColor: (Platform.OS === 'ios') ? '#4b4b4b' : '#4b4b4b',
-  tabFontSize: 15,
+  tabFontSize: 16,
   tabTextColor: (Platform.OS === 'ios') ? '#fff' : '#fff',
 
 
   // Text
-  textColor: '#4b4b4b',
-  inverseTextColor: '#fff',
+  textColor: '#ffffff',
+  inverseTextColor: '#ffffff',
 
 
   // Title

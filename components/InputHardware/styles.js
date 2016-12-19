@@ -6,7 +6,7 @@ const { StyleSheet, Dimensions, Platform } = React;
 
 module.exports = StyleSheet.create({
   container: {
-    backgroundColor: '#f7f7f7',
+    backgroundColor: '#333333',
   },
   textInput: {
     marginTop: 10,
@@ -17,7 +17,7 @@ module.exports = StyleSheet.create({
     borderColor: '#ddd',
     borderWidth: 1,
   },
-  textareaInput: {
+  multiline: {
     marginTop: 10,
     marginBottom: 10,
     borderBottomWidth: 0,
@@ -26,10 +26,15 @@ module.exports = StyleSheet.create({
     borderColor: '#ddd',
     borderWidth: 1,
     height: 100,
+    paddingLeft: 10,
+    paddingRight: 10,
+    textAlign: 'left',
+    textAlignVertical: 'top',
   },
   btnDark: {
-    backgroundColor: '#333333',
+    backgroundColor: '#FFCE00',
     elevation: 0,
+    height: 50,
   },
   noLeftMargin: {
     marginLeft: 0,
@@ -47,5 +52,8 @@ module.exports = StyleSheet.create({
   },
   noBorder: {
     borderBottomWidth: 0,
+  },
+  textBlack: {
+    color: '#333333'
   },
 });

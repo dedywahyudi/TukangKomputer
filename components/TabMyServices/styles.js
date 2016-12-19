@@ -5,7 +5,7 @@ const { StyleSheet, Dimensions, Platform } = React;
 
 module.exports = StyleSheet.create({
   container: {
-    backgroundColor: '#F7F7F7',
+    backgroundColor: '#333333',
   },
   mainColumn: {
     flex: 1,
@@ -15,7 +15,7 @@ module.exports = StyleSheet.create({
     flex: 0,
     fontSize: 21,
     textAlign: 'center',
-    color: '#ffffff',
+    color: '#333333',
     backgroundColor: '#FFCE00',
     width: 37,
     height: 37,
@@ -57,10 +57,10 @@ module.exports = StyleSheet.create({
   statusCompleted: {
     fontSize: 12,
     lineHeight: 18,
-    color: '#CECDD2',
+    color: '#A3A3A2',
   },
   dataArrow: {
-    color: '#CECDD2',
+    color: '#5A5A5A',
     marginRight: 10,
   },
   noLeftMargin: {

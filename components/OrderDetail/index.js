@@ -56,7 +56,7 @@ class OrderDetail extends Component {
                 </Col>
               </Grid>
             </ListItem>
-            <ListItem style={[styles.noBorder]}>
+            <ListItem style={[styles.noBorder, styles.note]}>
               <Grid>
                 <Row style={styles.rowDetail}>
                   <Text style={styles.textCenter}>Nama Tukang</Text>
@@ -66,16 +66,16 @@ class OrderDetail extends Component {
                 </Row>
               </Grid>
             </ListItem>
-            <ListItem style={[styles.noBorder, styles.skillList]}>
+            {/* <ListItem style={[styles.noBorder, styles.skillList]}>
               <Grid style={styles.tukangInfo}>
-                <Row>
-                  <Icon name="ios-desktop-outline" style={styles.skillIcon} />
-                  <Icon name="ios-laptop-outline" style={styles.skillIcon} />
-                  <Icon name="ios-print-outline" style={styles.skillIcon} />
-                  <Icon name="ios-bug-outline" style={styles.skillIcon} />
-                </Row>
+              <Row>
+              <Icon name="ios-desktop-outline" style={styles.skillIcon} />
+              <Icon name="ios-laptop-outline" style={styles.skillIcon} />
+              <Icon name="ios-print-outline" style={styles.skillIcon} />
+              <Icon name="ios-bug-outline" style={styles.skillIcon} />
+              </Row>
               </Grid>
-            </ListItem>
+            </ListItem> */}
             <ListItem itemDivider>
               <Text>Deskripsi Masalah</Text>
             </ListItem>

@@ -72,6 +72,10 @@ class ProfileDetail extends Component {
                   <Icon name="ios-print-outline" style={styles.skillIcon} />
                   <Icon name="ios-bug-outline" style={styles.skillIcon} />
                 </Row>
+              </Grid>
+            </ListItem>
+            <ListItem style={[styles.noBorder, styles.skillList]}>
+              <Grid style={styles.tukangInfo}>
                 <Row>
                   <StarRating
                     disabled={false}
@@ -82,7 +86,7 @@ class ProfileDetail extends Component {
                     maxStars={5}
                     rating={this.state.starCount}
                     selectedStar={(rating) => this.onStarRatingPress(rating)}
-                    starColor={'#FF8D0D'}
+                    starColor={'#FFCE00'}
                     starSize={30}
                   />
                 </Row>
@@ -91,7 +95,7 @@ class ProfileDetail extends Component {
             <ListItem itemDivider>
               <Text>Daftar Service Terakhir:</Text>
             </ListItem>
-            <ListItem iconLeft iconRight onPress={() => this.replaceAt('orderdetail')}>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight onPress={Actions.orderDetail}>
               <Icon name="ios-desktop-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -99,7 +103,7 @@ class ProfileDetail extends Component {
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-laptop-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -107,7 +111,7 @@ class ProfileDetail extends Component {
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-bug-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -115,7 +119,7 @@ class ProfileDetail extends Component {
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-folder-open-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -123,7 +127,7 @@ class ProfileDetail extends Component {
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-construct-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -131,7 +135,7 @@ class ProfileDetail extends Component {
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-link-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -139,7 +143,7 @@ class ProfileDetail extends Component {
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-sync-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
@@ -147,7 +151,55 @@ class ProfileDetail extends Component {
               </Grid>
               <Icon name="ios-arrow-forward" style={styles.dataArrow} />
             </ListItem>
-            <ListItem iconLeft iconRight>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
+              <Icon name="ios-print-outline" style={styles.sidebarIcon} />
+              <Grid style={styles.dataGrid}>
+                <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
+                <Row><Text style={styles.statusRed}>&#11044; In-progress</Text></Row>
+              </Grid>
+              <Icon name="ios-arrow-forward" style={styles.dataArrow} />
+            </ListItem>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
+              <Icon name="ios-link-outline" style={styles.sidebarIcon} />
+              <Grid style={styles.dataGrid}>
+                <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
+                <Row><Text style={styles.statusBlue}>&#11044; In-progress</Text></Row>
+              </Grid>
+              <Icon name="ios-arrow-forward" style={styles.dataArrow} />
+            </ListItem>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
+              <Icon name="ios-sync-outline" style={styles.sidebarIcon} />
+              <Grid style={styles.dataGrid}>
+                <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
+                <Row><Text style={styles.statusGreen}>&#11044; In-progress</Text></Row>
+              </Grid>
+              <Icon name="ios-arrow-forward" style={styles.dataArrow} />
+            </ListItem>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
+              <Icon name="ios-print-outline" style={styles.sidebarIcon} />
+              <Grid style={styles.dataGrid}>
+                <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
+                <Row><Text style={styles.statusRed}>&#11044; In-progress</Text></Row>
+              </Grid>
+              <Icon name="ios-arrow-forward" style={styles.dataArrow} />
+            </ListItem>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
+              <Icon name="ios-link-outline" style={styles.sidebarIcon} />
+              <Grid style={styles.dataGrid}>
+                <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
+                <Row><Text style={styles.statusBlue}>&#11044; In-progress</Text></Row>
+              </Grid>
+              <Icon name="ios-arrow-forward" style={styles.dataArrow} />
+            </ListItem>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
+              <Icon name="ios-sync-outline" style={styles.sidebarIcon} />
+              <Grid style={styles.dataGrid}>
+                <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>
+                <Row><Text style={styles.statusGreen}>&#11044; In-progress</Text></Row>
+              </Grid>
+              <Icon name="ios-arrow-forward" style={styles.dataArrow} />
+            </ListItem>
+            <ListItem style={styles.noLeftMargin} iconLeft iconRight>
               <Icon name="ios-print-outline" style={styles.sidebarIcon} />
               <Grid style={styles.dataGrid}>
                 <Row><Text style={styles.rowTitle}>Order Service #1132123</Text></Row>

@@ -55,7 +55,7 @@ module.exports = StyleSheet.create({
   },
   loginListOr: {
     marginTop: 10,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   loginInput: {
     marginTop: 10,
@@ -75,7 +75,7 @@ module.exports = StyleSheet.create({
     fontSize: 12,
   },
   dataArrow: {
-    color: '#5A5A5A',
+    color: '#CECDD2',
     marginRight: 10,
   },
   iconMore: {
@@ -84,22 +84,13 @@ module.exports = StyleSheet.create({
   },
   noLeftMargin: {
     marginLeft: 0,
-    paddingLeft: 18,
-    paddingRight: 18,
+    paddingLeft: 0,
   },
   alignRight: {
     alignSelf: 'flex-end',
   },
-  textWhite: {
-    color: '#ffffff',
-    fontSize: 16,
-    lineHeight: 16,
-  },
   textBlack: {
     color: '#333333',
     fontSize: 16,
-  },
-  textCenter: {
-    textAlign: 'center',
   },
 });

@@ -20,22 +20,22 @@ const TabView = (props, context) => {
     <View>
       <List>
         <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-cash" style={{ color: '#4b4b4b', width: 30 }} />
+          <Icon name="ios-cash" style={{ color: '#ffffff', width: 30 }} />
           <Text>Payment</Text>
           <Icon name="ios-arrow-forward" />
         </ListItem>
         <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-megaphone" style={{ color: '#4b4b4b', width: 30 }} />
+          <Icon name="ios-megaphone" style={{ color: '#ffffff', width: 30 }} />
           <Text>Newsletter & Promo Info</Text>
           <Icon name="ios-arrow-forward" />
         </ListItem>
         <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-switch" style={{ color: '#4b4b4b', width: 30 }} />
+          <Icon name="ios-switch" style={{ color: '#ffffff', width: 30 }} />
           <Text>Application Settings</Text>
           <Icon name="ios-arrow-forward" />
         </ListItem>
         <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-power" style={{ color: '#4b4b4b', width: 30 }} />
+          <Icon name="ios-power" style={{ color: '#ffffff', width: 30 }} />
           <Text>Logout</Text>
           <Icon name="ios-arrow-forward" />
         </ListItem>

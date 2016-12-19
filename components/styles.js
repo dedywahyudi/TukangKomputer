@@ -11,10 +11,10 @@ module.exports = StyleSheet.create({
     alignItems: 'center',
   },
   tabBarStyle: {
-    backgroundColor: '#474745',
+    backgroundColor: '#333333',
   },
   tabBarSelectedItemStyle: {
-    backgroundColor: '#F7F7F7',
+    backgroundColor: '#333333',
   },
   navigationBarStyle: {
     backgroundColor: '#333333',

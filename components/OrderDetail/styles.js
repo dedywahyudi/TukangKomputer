@@ -5,7 +5,7 @@ const { StyleSheet, Dimensions, Platform } = React;
 
 module.exports = StyleSheet.create({
   container: {
-    backgroundColor: '#f7f7f7',
+    backgroundColor: '#333333',
     flex: 1,
   },
   dataGrid: {
@@ -89,8 +89,6 @@ module.exports = StyleSheet.create({
   },
   thumbAlign: {
     alignSelf: 'center',
-    borderWidth: 4,
-    borderColor: '#F6C819',
   },
   buttonAlign: {
     alignSelf: 'center',
@@ -102,7 +100,7 @@ module.exports = StyleSheet.create({
   },
   iconAlign: {
     alignSelf: 'center',
-    color: '#FFF',
+    color: '#333333',
     fontSize: 40,
     lineHeight: 40,
   },
@@ -111,6 +109,7 @@ module.exports = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     textAlign: 'center',
+    lineHeight: 20,
   },
   rowDetail: {
   },
@@ -120,6 +119,7 @@ module.exports = StyleSheet.create({
     flexWrap: 'wrap',
     textAlign: 'center',
     fontSize: 12,
+    lineHeight: 20,
     color: '#CECDD2',
   },
   skillIcon: {

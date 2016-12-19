@@ -5,7 +5,7 @@ const { StyleSheet, Dimensions, Platform } = React;
 
 module.exports = StyleSheet.create({
   container: {
-    backgroundColor: '#f7f7f7',
+    backgroundColor: '#333333',
     flex: 1,
   },
   dataGrid: {
@@ -26,7 +26,7 @@ module.exports = StyleSheet.create({
   statusYellow: {
     fontSize: 12,
     lineHeight: 18,
-    color: '#FF8D0D',
+    color: '#FFCE00',
   },
   statusRed: {
     fontSize: 12,
@@ -45,7 +45,7 @@ module.exports = StyleSheet.create({
   },
   listYellow: {
     paddingLeft: 0,
-    backgroundColor: '#FF8D0D',
+    backgroundColor: '#FFCE00',
   },
   listRed: {
     paddingLeft: 0,
@@ -77,20 +77,18 @@ module.exports = StyleSheet.create({
     marginTop: 20,
   },
   sidebarIcon: {
+    flex: 0,
     fontSize: 21,
-    alignSelf: 'center',
-    color: '#fff',
-    backgroundColor: '#FF8D0D',
+    textAlign: 'center',
+    color: '#333333',
+    backgroundColor: '#FFCE00',
     width: 37,
     height: 37,
+    lineHeight: 30,
     borderRadius: 18,
-    paddingLeft: 10,
-    paddingTop: (Platform.OS === 'android') ? 8 : 5,
   },
   thumbAlign: {
     alignSelf: 'center',
-    borderWidth: 4,
-    borderColor: '#F6C819',
   },
   buttonAlign: {
     alignSelf: 'center',
@@ -102,7 +100,7 @@ module.exports = StyleSheet.create({
   },
   iconAlign: {
     alignSelf: 'center',
-    color: '#FFF',
+    color: '#333333',
     fontSize: 40,
     lineHeight: 40,
   },
@@ -126,7 +124,7 @@ module.exports = StyleSheet.create({
     alignSelf: 'center',
     fontSize: 21,
     textAlign: 'center',
-    color: '#ffffff',
+    color: '#333333',
     backgroundColor: '#FFCE00',
     width: 37,
     height: 37,
@@ -194,5 +192,13 @@ module.exports = StyleSheet.create({
   },
   noMarginLeft: {
     marginLeft: 0,
+  },
+  dataArrow: {
+    color: '#5A5A5A',
+    marginRight: 10,
+  },
+  noLeftMargin: {
+    marginLeft: 0,
+    paddingLeft: 18,
   },
 });

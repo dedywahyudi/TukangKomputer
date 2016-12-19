@@ -13,11 +13,16 @@ import TabHome from './TabHome';
 import InputHardware from './InputHardware';
 import LokasiTukang from './LokasiTukang';
 import TabMyServices from './TabMyServices';
-import TabMyAccount from './TabMyAccount';
+// import TabMyAccount from './TabMyAccount';
+import Daftar from './Daftar';
+import LupaPassword from './LupaPassword';
 import TabProfileLogin from './TabMyAccount/TabProfileLogin';
 import TabProfileNotLogin from './TabMyAccount/TabProfileNotLogin';
+import PushNotification from './PushNotification';
+import Newsletter from './Newsletter';
 import OrderDetail from './OrderDetail';
 import ProfileDetail from './ProfileDetail';
+import EditProfile from './EditProfile';
 import TabIcon from './TabIcon';
 import NavigationDrawer from './NavigationDrawer';
 import styles from './styles';
@@ -34,7 +39,7 @@ const reducerCreate = params => {
 const getSceneStyle = (/* NavigationSceneRendererProps */ props, computedProps) => {
   const style = {
     flex: 1,
-    backgroundColor: '#F7F7F7',
+    backgroundColor: '#333333',
     shadowColor: null,
     shadowOffset: null,
     shadowOpacity: null,
@@ -42,7 +47,7 @@ const getSceneStyle = (/* NavigationSceneRendererProps */ props, computedProps) 
   };
   if (computedProps.isActive) {
     style.marginTop = computedProps.hideNavBar ? 0 : 54;
-    style.marginBottom = computedProps.hideTabBar ? 0 : 54;
+    style.marginBottom = computedProps.hideTabBar ? 0 : 50;
   }
   return style;
 };
@@ -187,8 +192,58 @@ class Routers extends Component {
                   renderBackButton={this.customBackButton}
                   renderRightButton={this.renderRightButton}
                 />
+                <Scene
+                  key="editProfile"
+                  component={EditProfile}
+                  title="Edit Profile"
+                  titleStyle={styles.colorWhite}
+                  renderBackButton={this.customBackButton}
+                  renderRightButton={this.renderRightButton}
+                />
+                <Scene
+                  key="newsletter"
+                  component={Newsletter}
+                  title="Newsletter"
+                  titleStyle={styles.colorWhite}
+                  renderBackButton={this.customBackButton}
+                  renderRightButton={this.renderRightButton}
+                />
+                <Scene
+                  key="pushNotification"
+                  component={PushNotification}
+                  title="Push Notification"
+                  titleStyle={styles.colorWhite}
+                  renderBackButton={this.customBackButton}
+                  renderRightButton={this.renderRightButton}
+                />
               </Scene>
             </Scene>
+          </Scene>
+          <Scene key="daftar" direction="vertical" >
+            <Scene
+              key="daftarModal"
+              navigationBarStyle={styles.navigationBarStyle}
+              component={Daftar}
+              title="Daftar"
+              titleStyle={styles.colorWhite}
+              renderBackButton={this.customBackButton}
+              renderRightButton={this.renderRightButton}
+              direction="vertical"
+              panHandlers={null}
+              duration={1}
+            />
+          </Scene>
+          <Scene key="lupaPassword" direction="vertical" >
+            <Scene
+              key="lupaPasswordModal"
+              navigationBarStyle={styles.navigationBarStyle}
+              component={LupaPassword}
+              title="Lupa Password"
+              titleStyle={styles.colorWhite}
+              renderBackButton={this.customBackButton}
+              renderRightButton={this.renderRightButton}
+              direction="vertical"
+            />
           </Scene>
         </Scene>
       </Router>

@@ -6,7 +6,7 @@ const { StyleSheet, Dimensions, Platform } = React;
 
 module.exports = StyleSheet.create({
   container: {
-    backgroundColor: '#f7f7f7',
+    backgroundColor: '#333333',
   },
   // mainColumn: {
   //   flex: 1,

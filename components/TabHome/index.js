@@ -143,7 +143,7 @@ class TabHome extends Component { // eslint-disable-line
                   <View style={styles.itemRow}>
 
                     <Button rounded style={styles.buttonAlign}>
-                      <Icon style={styles.iconMore} large name="ios-more" />
+                      <Icon style={styles.iconAlign} large name="ios-more-outline" />
                     </Button>
                   </View>
                   <View style={styles.itemRow}>
