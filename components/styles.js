@@ -47,4 +47,11 @@ module.exports = StyleSheet.create({
     marginLeft: 0,
     paddingLeft: 18,
   },
+  textWhite: {
+    color: '#ffffff',
+  },
+  dataArrow: {
+    color: '#5A5A5A',
+    marginRight: 10,
+  },
 });

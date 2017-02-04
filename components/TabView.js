@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import { Icon, Text, List, ListItem } from 'native-base';
-// import { Actions } from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 import styles from './styles';
+import theme from './themes/base-theme';
 
 const contextTypes = {
   drawer: React.PropTypes.object,
@@ -17,27 +18,26 @@ const propTypes = {
 const TabView = (props, context) => {
   const drawer = context.drawer;
   return (
-    <View>
+    <View theme={theme}>
       <List>
-        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-cash" style={{ color: '#ffffff', width: 30 }} />
-          <Text>Payment</Text>
-          <Icon name="ios-arrow-forward" />
+        <ListItem
+          style={styles.noLeftMargin} iconRight
+          onPress={() => { drawer.close(); Actions.apiTestingScreen(); }}
+        >
+          <Text style={styles.textWhite}>API Service</Text>
+          <Icon name="ios-arrow-forward" style={styles.dataArrow} />
         </ListItem>
-        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-megaphone" style={{ color: '#ffffff', width: 30 }} />
-          <Text>Newsletter & Promo Info</Text>
-          <Icon name="ios-arrow-forward" />
+        <ListItem style={styles.noLeftMargin} iconRight
+          onPress={() => { drawer.close(); Actions.mapTestingScreen(); }}
+        >
+          <Text style={styles.textWhite}>Map Testing</Text>
+          <Icon name="ios-arrow-forward" style={styles.dataArrow} />
         </ListItem>
-        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-switch" style={{ color: '#ffffff', width: 30 }} />
-          <Text>Application Settings</Text>
-          <Icon name="ios-arrow-forward" />
-        </ListItem>
-        <ListItem style={styles.noLeftMargin} iconLeft iconRight>
-          <Icon name="ios-power" style={{ color: '#ffffff', width: 30 }} />
-          <Text>Logout</Text>
-          <Icon name="ios-arrow-forward" />
+        <ListItem style={styles.noLeftMargin} iconRight
+          onPress={() => { drawer.close(); Actions.deviceInfoScreen(); }}
+        >
+          <Text style={styles.textWhite}>Device Info</Text>
+          <Icon name="ios-arrow-forward" style={styles.dataArrow} />
         </ListItem>
       </List>
     </View>

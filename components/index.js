@@ -15,6 +15,9 @@ import LokasiTukang from './LokasiTukang';
 import TabMyServices from './TabMyServices';
 // import TabMyAccount from './TabMyAccount';
 import Daftar from './Daftar';
+import APITestingScreen from './APITestingScreen';
+import MapTestingScreen from './MapTestingScreen';
+import DeviceInfoScreen from './DeviceInfoScreen';
 import LupaPassword from './LupaPassword';
 import TabProfileLogin from './TabMyAccount/TabProfileLogin';
 import TabProfileNotLogin from './TabMyAccount/TabProfileNotLogin';
@@ -104,6 +107,36 @@ class Routers extends Component {
               tabBarStyle={styles.tabBarStyle}
               tabBarSelectedItemStyle={styles.tabBarSelectedItemStyle}
             >
+              <Scene
+                key="apiTestingScreen"
+                component={APITestingScreen}
+                title="API Testing Screen"
+                titleStyle={styles.colorWhite}
+                navigationBarStyle={styles.navigationBarStyle}
+                renderLeftButton={this.renderMenuButton}
+                renderRightButton={this.renderRightButton}
+                hideTabBar
+              />
+              <Scene
+                key="deviceInfoScreen"
+                component={DeviceInfoScreen}
+                title="Device Info Screen"
+                titleStyle={styles.colorWhite}
+                navigationBarStyle={styles.navigationBarStyle}
+                renderLeftButton={this.renderMenuButton}
+                renderRightButton={this.renderRightButton}
+                hideTabBar
+              />
+              <Scene
+                key="mapTestingScreen"
+                component={MapTestingScreen}
+                title="Map Testing Screen"
+                titleStyle={styles.colorWhite}
+                navigationBarStyle={styles.navigationBarStyle}
+                renderLeftButton={this.renderMenuButton}
+                renderRightButton={this.renderRightButton}
+                hideTabBar
+              />
               <Scene
                 key="tabHome"
                 navigationBarStyle={styles.navigationBarStyle}
